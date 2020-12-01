@@ -42,7 +42,7 @@ type
     function Body: string; overload;
 
     function Exchange(Value: String): IGBStompMessengerRequest; overload;
-    function Exchange: string;
+    function Exchange: string; overload;
 
     function Queue(Value: String): IGBStompMessengerRequest; overload;
     function Queue: String; overload;
@@ -60,6 +60,23 @@ type
     function JSONArray  : TJSONArray;
   end;
 
+function NewStompMessenger: IGBStompMessenger;
+function NewRequestMessage: IGBStompMessengerRequest;
+
 implementation
+
+uses
+  GBStomp.StompClient,
+  GBStomp.Messenger.RequestParam;
+
+function NewStompMessenger: IGBStompMessenger;
+begin
+  result := TGBStompMessenger.New;
+end;
+
+function NewRequestMessage: IGBStompMessengerRequest;
+begin
+  result := TGBStompRequestParam.New;
+end;
 
 end.
