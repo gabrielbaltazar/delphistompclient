@@ -2,7 +2,7 @@ program GBSampleStompClient;
 
 uses
   Vcl.Forms,
-  FMain in 'FMain.pas' {Form1},
+  FMain in 'FMain.pas' {frmMain},
   GBStomp.Interfaces in '..\..\source\GBStomp.Interfaces.pas',
   GBStomp.Messenger.RequestParam in '..\..\source\GBStomp.Messenger.RequestParam.pas',
   GBStomp.Messenger.ResponseParam in '..\..\source\GBStomp.Messenger.ResponseParam.pas',
@@ -13,6 +13,6 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TfrmMain, frmMain);
   Application.Run;
 end.
