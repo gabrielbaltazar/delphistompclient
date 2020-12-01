@@ -2,7 +2,8 @@ program GBSampleStompClient;
 
 uses
   Vcl.Forms,
-  FMain in 'FMain.pas' {Form1};
+  FMain in 'FMain.pas' {Form1},
+  GBStomp.Interfaces in '..\..\source\GBStomp.Interfaces.pas';
 
 {$R *.res}
 
