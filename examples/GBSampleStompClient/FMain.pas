@@ -39,6 +39,7 @@ type
     FMessenger: IGBStompMessenger;
 
     procedure OnReceiveMessage(AParam: IGBStompMessengerResponseParam);
+    procedure Log(Value: String);
     { Private declarations }
   public
     { Public declarations }
@@ -58,6 +59,7 @@ begin
     .Host(edtHost.Text)
     .Username(edtUsername.Text)
     .Password(edtPassword.Text)
+    .OnLog(Log)
     .Connect;
 
   ShowMessage('Conectado');
@@ -110,6 +112,11 @@ end;
 procedure TfrmMain.FormCreate(Sender: TObject);
 begin
   FMessenger := NewStompMessenger;
+end;
+
+procedure TfrmMain.Log(Value: String);
+begin
+  mmoSubscribeQueue.Lines.Add(Value);
 end;
 
 procedure TfrmMain.OnReceiveMessage(AParam: IGBStompMessengerResponseParam);
