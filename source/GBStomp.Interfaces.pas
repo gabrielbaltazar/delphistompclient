@@ -31,6 +31,8 @@ type
     function Subscribe  (AQueueName: string; AOnReceive: TOnMessengerReceive): IGBStompMessenger;
     function UnSubscribe(AQueueName: String): IGBStompMessenger;
     function UnSubscribeAll: IGBStompMessenger;
+
+    function OnLog(Value: TOnMessengerLog): IGBStompMessenger;
   end;
 
   IGBStompMessengerRequest = interface

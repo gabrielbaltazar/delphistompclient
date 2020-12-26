@@ -24,9 +24,6 @@ object frmMain: TfrmMain
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitLeft = 272
-    ExplicitTop = 32
-    ExplicitWidth = 185
     object lblTitle: TLabel
       AlignWithMargins = True
       Left = 10
@@ -54,8 +51,6 @@ object frmMain: TfrmMain
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitWidth = 645
-    ExplicitHeight = 208
     object Label1: TLabel
       Left = 167
       Top = 77
