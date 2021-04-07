@@ -99,7 +99,7 @@ object frmMain: TfrmMain
       Width = 151
       Height = 21
       TabOrder = 0
-      Text = 'teste'
+      Text = 'central_recebimento_nfe'
     end
     object edtPubExchange: TEdit
       Left = 10
@@ -173,7 +173,7 @@ object frmMain: TfrmMain
       Width = 151
       Height = 21
       TabOrder = 9
-      Text = 'teste'
+      Text = 'central_recebimento_nfe'
     end
     object btnSubscribeQueue: TButton
       Left = 391

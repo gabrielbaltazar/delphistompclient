@@ -248,7 +248,7 @@ begin
   result := Self;
   Client.Unsubscribe('/queue/' + AQueueName);
 
-  if FQueueList.ContainsKey(AQueueName) then
+  if (Assigned(FQueueList)) and (FQueueList.ContainsKey(AQueueName)) then
     FQueueList.Remove(AQueueName);
 
   Log('Unsubscribe a %s queue', [AQueueName]);
