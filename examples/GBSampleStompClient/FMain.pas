@@ -79,7 +79,7 @@ begin
   request := NewRequestMessage;
   request
     .Exchange(edtPubExchange.Text)
-    .Route('routeTeste')
+    .Route('nfe')
     .Body(mmoSendMessage.Lines.Text);
 
   pub.SendExchangeMessage(request);
